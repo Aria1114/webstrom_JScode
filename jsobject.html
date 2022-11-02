@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+      table{
+        width: 600px;
+        text-align: center;
+      }
+      table,th,th{
+        border: 1px solid #ccc;
+        border-collapse: collapse;
+      }
+      caption{
+        font-size: 18px;
+        margin-bottom: 10px;
+        font-weight: 700;
+      }
+      tr{
+        height: 40px;
+        cursor: pointer;
+      }
+      table tr:nth-child(1){
+        background-color: #ddd;
+      }
+      table tr:not(:first-child):hover{
+        background-color: #eee;
+      }
+    </style>
+</head>
+<body>
+    <h2>学生信息</h2>
+    <p>将数据渲染到页面中</p>
+
+    <script>
+        /*//对象由属性和方法组成  可以属性访问+使用方法
+        let person = {
+          uname:'andy',
+          age:18,
+          sayHi:function(){
+              document.write("hello")
+          }
+        }
+        document.write(person.uname)
+        document.write(person['uname'])
+        person.sayHi()
+        document.write(`<br>`)
+        //遍历 要用中括号
+        for(let k in person){//k是属性名 获取的是字符串，所以只能用中括号形式
+          document.write(person[k]+' ')//得到属性值
+        }
+        document.write(`<br>`)*/
+        //最常用的是 数组里面放对象
+
+        //打印表格的头部和尾部
+        document.write(`
+          <table>
+          <caption>学生列表</caption>
+          <tr>
+            <th>序号</th>
+            <th>姓名</th>
+            <th>年龄</th>
+            <th>性别</th>
+            </tr>`)
+
+          let student = [
+            {name:'A',age:18,gender:'f'},//A学生
+            {name:'B',age:19,gender:'m'},//B学生
+            {name:'C',age:20,gender:'f'}//C学生
+          ]
+          //渲染
+          for(let i =0;i<student.length;i++) {
+            document.write(`
+              <tr>
+                <th>${i + 1}</th>
+                <th>${student[i].name}</th>
+                <th>${student[i].age}</th>
+                <th>${student[i].gender}</th>
+              </tr>
+             `)
+          }
+
+            document.write(`</table>`)
+
+    </script>
+</body>
+</html>

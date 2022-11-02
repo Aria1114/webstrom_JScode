@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+    <script>
+    //声明
+/*        function getSum(){
+            let num1 = 10
+            let num2 = 20
+            document.write(num1+num2)
+        }
+    //调用
+        getSum()
+        document.write(`<br>`)
+        function getSum100(){
+            let sum = 0;
+            for(let i =1; i<=100; i++){
+                sum+=i
+            }
+            document.write(sum)
+        }
+        getSum100()*/
+
+        //改进 引入参数
+        function getSum(num1,num2){
+            document.write(num1+num2)
+        }
+        getSum(1,5)
+        document.write(`<br>`)
+        function getSum100(start,end){
+            let sum = 0;
+            for(let i =start; i<=end; i++){
+                sum+=i
+            }
+            document.write(sum)
+        }
+        getSum100()
+        getSum100(1,100)
+
+    </script>
+</body>
+</html>

@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+  <textarea name="" id="" cols="30" rows="10">
+    用户注册协议：xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+  </textarea>
+  <br>
+  <button class = 'btn' disabled>我已阅读用户协议(6)</button>
+  <script>
+    /*let timer = setInterval(function (){
+      console.log('我的计时器   经过指定1000毫秒后执行一次')
+    },1000)*/
+    //clearInterval(timer)
+    let btn = document.querySelector('.btn')
+    let i=6
+    let timer =setInterval(function (){
+      if(i>0){
+        i--
+        btn.innerHTML = `我已阅读用户协议(${i})`
+        console.log(i)
+      }
+      if(i==0){
+        clearInterval(timer)
+        btn.disabled = false
+        btn.innerHTML = '我已阅读用户协议'
+      }
+
+    },1000)
+
+
+
+  </script>
+</body>
+</html>

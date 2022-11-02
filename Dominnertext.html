@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+      div{
+        width: 200px;
+        height: 200px;
+        background-color: pink;
+      }
+    </style>
+</head>
+<body>
+  <div>
+    粉红色的回忆
+  </div>
+  <input type="text" value="请输入">
+  <button disabled>按钮</button>
+  <script>
+    //获取标签（元素）
+    let box = document.querySelector('div')
+    //修改标签（元素）内容
+    box.innerText = '有点意思~'
+    //修改元素属性    获取标签.属性 比如 img.src = ' '
+    //修改样式属性    不要忘记style
+    box.style.background = 'hotpink'
+
+    //修改表单属性 type value
+    let input = document.querySelector('input')
+    console.log(input.value)//请输入
+    input.type = 'password'
+    let btn = document.querySelector('button')
+    btn.disabled = false//启动按钮
+
+  </script>
+
+</body>
+</html>
